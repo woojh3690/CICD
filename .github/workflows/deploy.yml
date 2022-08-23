@@ -35,4 +35,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           source: "./build/libs/deploy.jar"
           target: "~/test/"
-          strip_components: 4
+          strip_components: 3
