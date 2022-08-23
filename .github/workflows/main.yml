@@ -5,15 +5,12 @@ on:
     branches: [master]
 
 jobs:
-  call_build:
+  call_testing:
     uses: ./.github/workflows/junit.yml
-#    with:
-#      artifact_name: apiapp
+    secrets: inherit
 
-#  call_release:
-#    uses: ./.github/worlfows/cd.yaml
-#    needs: call_build
-#    with:
-#      title: latest
-#      artifact_name: apiapp
-#    secrets: inherit
+  # call_deploy 호출 전 call_testing 체이닝
+  call_deploy:
+    uses: ./.github/workflows/deploy.yml
+    needs: call_testing
+    secrets: inherit
