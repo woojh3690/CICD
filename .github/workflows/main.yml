@@ -6,7 +6,7 @@ on:
 
 jobs:
   call_build:
-    uses: ./.github/workflows/junit.yaml
+    uses: ./.github/workflows/junit.yml
 #    with:
 #      artifact_name: apiapp
 
