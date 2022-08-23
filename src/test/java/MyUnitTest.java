@@ -11,7 +11,7 @@ public class MyUnitTest {
     @DisplayName("문자열 합치기 테스트")
     void concat() {
         assertEquals(
-                "first seconda",
+                "first second",
                 unit.concatenate("first", "second")
         );
     }
