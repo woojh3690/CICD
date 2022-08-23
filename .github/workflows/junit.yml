@@ -29,4 +29,5 @@ jobs:
         uses: EnricoMi/publish-unit-test-result-action@v1.4
         if: ${{ always() }}  # 테스트가 실패하여도 Report 를 보기 위해 `always`로 설정
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           files: build/test-results/**/*.xml
