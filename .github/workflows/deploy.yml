@@ -33,5 +33,5 @@ jobs:
           port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          source: "./build/libs/*.jar"
-          target: "~/"
+          source: "./build/libs/deploy.jar"
+          target: "~/test/"
