@@ -1,0 +1,19 @@
+name: 'CI/CD'
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  call_build:
+    uses: ./.github/workflows/junit.yaml
+#    with:
+#      artifact_name: apiapp
+
+#  call_release:
+#    uses: ./.github/worlfows/cd.yaml
+#    needs: call_build
+#    with:
+#      title: latest
+#      artifact_name: apiapp
+#    secrets: inherit
